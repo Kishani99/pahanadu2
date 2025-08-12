@@ -92,6 +92,11 @@
             <a href="search_customer.jsp">Search Customer</a>
         </div>
 
+
+<div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Search">
+            <a href="Adminsearch_books.jsp">Search book</a>
+        </div>
         <div class="card">
             <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="Bill">
             <a href="callculate _print bill.jsp">Print and Calculate Bill</a>
