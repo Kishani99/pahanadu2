@@ -84,7 +84,7 @@
 
         <div class="card">
             <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Books">
-            <a href="manage_books.jsp">Manage Books</a>
+            <a href="Admin_managebooks.jsp">Manage Books</a>
         </div>
 
         <div class="card">
