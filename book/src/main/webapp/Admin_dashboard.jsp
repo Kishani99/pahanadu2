@@ -78,7 +78,7 @@
     <div class="container">
         <div class="card">
             <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Register">
-            <a href="Admin register_customer.jsp">Register Customer</a>
+            <a href="Admin_registercustomer.jsp">Register Customer</a>
         </div>
 
 
@@ -94,7 +94,7 @@
 
         <div class="card">
             <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="Bill">
-            <a href="callculate _print bill.jsp">Print & Calculate Bill</a>
+            <a href="callculate _print bill.jsp">Print and Calculate Bill</a>
         </div>
     </div>
 

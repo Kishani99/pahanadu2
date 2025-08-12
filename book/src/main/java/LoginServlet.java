@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
               
                 switch (role.toLowerCase()) {
                     case "admin":
-                        response.sendRedirect("Admin/Admin_dashboard.jsp");
+                        response.sendRedirect("Admin_dashboard.jsp");
                         break;
                     case "cashier":
                         response.sendRedirect("cashier_dashboard.jsp");
