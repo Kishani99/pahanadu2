@@ -1,17 +1,19 @@
 
 
-
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    
+   
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/pahanaedu";
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASS = "";
@@ -36,15 +38,15 @@ public class LoginServlet extends HttpServlet {
             if (rs.next()) {
                 String role = rs.getString("role");
 
-                
+                // Store username & role in session
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
                 session.setAttribute("role", role);
 
-              
+                // Redirect based on role
                 switch (role.toLowerCase()) {
                     case "admin":
-                        response.sendRedirect("Admin_dashboard.jsp");
+                        response.sendRedirect("admin_dashboard.jsp");
                         break;
                     case "cashier":
                         response.sendRedirect("cashier_dashboard.jsp");
@@ -57,7 +59,7 @@ public class LoginServlet extends HttpServlet {
                         break;
                 }
             } else {
-              
+                // Invalid credentials
                 response.sendRedirect("login.jsp?error=Invalid+username+or+password");
             }
 
